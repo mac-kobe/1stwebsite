@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+    background-color: transparent;
+}
+
+main {
+    margin: 0;
+    color: black;
+    font-family: Onest, sans-serif;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+section:nth-child(1) {
+  background-image: url(images/corvette2.jpg);
+  color: white;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Adjust the height to fit the image */
+}
+  
+
+section:nth-child(2) {
+    background-color: rgb(196, 196, 196);
+    color: white;
+    justify-content: left;
+}
+
+.history {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 80px;
+  }
+  
+  .text-container {
+    width: 60%; /* Width of the text container */
+  }
+  
+  .left {
+    margin: 0;
+    padding: 5px 10px;
+  }
+  
+  .image-right {
+    width: 50%; /* Set width of the image */
+    height: 100vh; /* Maintain aspect ratio */
+    margin-left: 20px; /* Add space between text and image */
+  }
+
+
+nav {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    translate: -50%;
+    font-weight: 500;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 16px;
+  }
+
+
+
