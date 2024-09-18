@@ -1,0 +1,13 @@
+# Ignore macOS system files
+.DS_Store
+
+images/.DS_Store
+
+# Ignore node_modules
+node_modules/
+
+# Ignore log files
+*.log
+
+#Ignore environments as it could expose sensitive info
+.env
