@@ -1,0 +1,20 @@
+.timeline {
+    display: flex;
+    flex-direction: column; /* Makes the divs stack vertically */
+    align-items: flex-start; /* Optional: align the items to the left */
+  }
+  
+.timeline div {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e0e0e0; /* Visual aid */
+  }
+
+
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr; /* One column grid */
+    gap: 10px; /* Space between each event */
+  }
+  

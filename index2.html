@@ -13,7 +13,7 @@
     <nav>
         <a href="#home" class="a">Home</a>
         <a href="#history" class="a">History</a>
-        <a href="#evolution" class="a">Evolution</a>
+        <a href="#timeline" class="a">Timeline</a>
         <a href="#today" class="a">Today</a>
         </nav>
 
@@ -22,8 +22,8 @@
         <section id="home">
             <div class="home">
                 <div class="introduction">
-                    <h1>THE CHEVROLET CORVETTE</h1>
-                    <p>America's Longest-Running Sports Car Legacy</p>
+                    <h1 id="title">THE CHEVROLET CORVETTE</h1>
+                    <p id="titleCaption">America's Longest-Running Sports Car Legacy</p>
                 </div>
             </div>
         </section>
@@ -38,18 +38,25 @@
                     <p class="paragraph4">Earl retired from GM in 1958 but left an enduring legacy. The Corvette remains a symbol of American automotive excellence, and Earl’s innovations in car design continue to shape the industry today.</p>
                     
                 </div>
-                <img src="images/corvette3.jpg" alt="Image description" class="image-right">
+                <div class="harley-container">
+                    <img src="images/harleyearl1.jpg" alt="Harley Earl, the designer of the Corvette" class="harley">
+                </div>
             </div>
         </section>
 
-        <section id="evolution">
-            <div class="evolution">
-                <h2>Evolution</h2>
-                <p>
-                    The Evolution of the Chevy Corvette
-                </p>
-                <div class="evolution_photos">
-                    <p>INSERT IMAGES HERE</p>
+        <section class="timeline">
+            <div id="timeline">
+                <div class="container cleft">
+                    <div class="content">
+                      <h2>C1</h2>
+                      <p>Lorem ipsum..</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                      <h2>C2</h2>
+                      <p>Lorem ipsum..</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -58,66 +65,95 @@
             <div class="today">
                 <h2>The Modern Day Chevrolet Corvette</h2>
                 <p>Today's New Gen Corvette</p>
-                <div class="slideshow-container">
-                    <!-- Slide 1 -->
-                    <div class="mySlides fade">
-                      <img src="images/corvette1.jpg" style="width:100%">
-                    </div>
-                  
-                    <!-- Slide 2 -->
-                    <div class="mySlides fade">
-                      <img src="images/corvette2.jpg" style="width:100%">
-                    </div>
-                  
-                    <!-- Slide 3 -->
-                    <div class="mySlides fade">
-                      <img src="images/corvette4.jpg" style="width:100%">
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="mySlides fade">
-                        <img src="images/corvette5.jpg" style="width:100%">
-                      </div>
-                  
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                  </div>
             </div>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="images/corvette1.jpg" style="width:100%">
+                    <div class="text">C8 Corvette Model Shown</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="images/corvette5.jpg" style="width:100%">
+                    <div class="text">C8 Corvette Model Shown</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="images/corvette6.jpg" style="width:100%">
+                    <div class="text">C8 Corvette Model Shown</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="images/corvette9.jpg" style="width:100%">
+                    <div class="text">C8 Corvette Model Shown</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="images/corvette10.jpg" style="width:100%">
+                    <div class="text">C8 Corvette Model Shown</div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align: start;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
         </section>
-    </main>
+
+
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
-    
+
+        // Next/previous controls
         function plusSlides(n) {
-          showSlides(slideIndex += n);
+            showSlides(slideIndex += n);
         }
-    
+
+        // Thumbnail image controls
         function currentSlide(n) {
-          showSlides(slideIndex = n);
+            showSlides(slideIndex = n);
         }
-    
+
         function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
         }
-      </script>
+
+
+    </script>
+    </main>
 </body>
 </html>
 
 
 
- <!--  <div class="container">
-    <img src="images/corvette1.jpg" alt="Image of the new corvette model" class="image">
-</div> */-->
+            
