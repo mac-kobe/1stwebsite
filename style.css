@@ -122,7 +122,9 @@ nav {
     padding: 16px;
   }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 
 
@@ -220,11 +222,12 @@ nav {
   /*TIMELINE SECTION STARTS HERE*/
 #timeline {
   display: grid;
-  grid-template-columns: 1fr 50px 1fr;
+  grid-template-columns: 1fr 30px 1fr;
   grid-template-rows: auto;
   background-color: #181e2c;
   height: auto;
   color: white;
+  grid-row-gap: 15rem;
 
 }
 
@@ -290,7 +293,7 @@ nav {
   grid-row: 2/2;
   margin-bottom: 50px;
   margin-top: 30px;
-  margin-left: 30%;
+  margin-left: 40%;
 }
 .c3-img {
   border-radius: 10%;
@@ -307,7 +310,7 @@ nav {
   grid-row: 4/4;
   margin-bottom: 50px;
   margin-top: 30px;
-  margin-left: 30%;
+  margin-left: 40%;
 }
 .c5-img {
   border-radius: 10%;
@@ -315,7 +318,7 @@ nav {
   height: auto;
   grid-row: 5/5;
   margin-bottom: 50px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .c6-img {
   border-radius: 10%;
@@ -324,7 +327,7 @@ nav {
   grid-row: 6/6;
   margin-bottom: 50px;
   margin-top: 30px;
-  margin-left: 30%;
+  margin-left: 40%;
 }
 .c7-img {
   border-radius: 10%;
@@ -341,7 +344,7 @@ nav {
   grid-row: 8/8;
   margin-bottom: 50px;
   margin-top: 30px;
-  margin-left: 30%;
+  margin-left: 40%;
 }
 
 .vertical-line {
