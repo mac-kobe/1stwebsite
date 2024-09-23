@@ -15,7 +15,7 @@ main {
 }
 #title {
   font-size: 80px;
-  margin-top: -360px;
+  margin-top: -20%;
 }
 #titleCaption {
   transform: translateY(250px);
@@ -57,9 +57,9 @@ section:nth-child(2) {
     display: flex;
     justify-content: space-between; /* Space between text and image */
     align-items: flex-start; /* Align items to the top */
-    padding-top: 80px;
+    padding-top: 40px;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: #0e121a;
   }
@@ -74,7 +74,7 @@ section:nth-child(2) {
   .left {
     margin: 0;
     padding: 5px 10px;
-    font-size: 50px;
+    font-size: 51px;
   }
   
   .harley-container {
@@ -379,7 +379,7 @@ html {
 .timeline-title {
   grid-column: 2/3;
   grid-row: 1/1;
-  margin-left: 24%;
+  margin-left: 15%;
   font-size: 50px;
 }
 
