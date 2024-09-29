@@ -18,8 +18,9 @@ main {
   margin-top: -20%;
 }
 #titleCaption {
-  transform: translateY(250px);
+  transform: translateY(350px);
   font-size: 30px;
+  position: relative;
 }
 .home {
     display: flex; /* Activate flexbox */
@@ -47,52 +48,57 @@ section:nth-child(1) {
 }
   
 
-section:nth-child(2) {
-    background-color: black;
-    color: white;
-    justify-content: left;
+p {
+  max-width: 67ch;
 }
 
-.history {
-    display: flex;
-    justify-content: space-between; /* Space between text and image */
-    align-items: flex-start; /* Align items to the top */
-    padding-top: 40px;
-    overflow: hidden;
-    height: 100%;
-    width: 100vw;
-    background-color: #0e121a;
+#history {
+  background-color: #0e121a;
+  color: white;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  column-gap: 40px;
+  height: auto;
+
+}
+  .history {
+      display: contents;
+
   }
   
   .text-container {
-    width: 60%; /* Width of the text container */
-    margin-left: 5%;
-    margin-right: 5%; 
-    height: 100vh;
+    grid-column: 1/2;
+    padding-left: 10%;
+    padding-top: 5%;
+  }
+
+
+  .paragraph {
+    line-height: 1.8;
   }
   
+  .harley-container {
+    display: flex;               /* Use Flexbox to center the image */
+    justify-content: center;      /* Horizontally center */
+    align-items: center;          /* Vertically center */
+    grid-column: 2 / 3;           /* Place the container in the correct grid column */
+    height: 100%;                 /* Ensure the container takes up the full height of the grid row */
+    padding-top: 5%;
+  }
+
+  .harley-container img {
+    width: 80%;                   /* Adjust the width of the image */
+    height: auto;                 /* Maintain aspect ratio */
+  }
+
+
+
   .left {
     margin: 0;
     padding: 5px 10px;
     font-size: 51px;
   }
   
-  .harley-container {
-      height: 100vh; /* Section takes full height of the viewport */
-      display: flex; /* Use flexbox to center the image */
-      align-items: center; /* Vertically center the image */
-      justify-content: center; /* Horizontally center the image */
-      overflow: hidden; /* Hide any overflowing parts of the image */
-    }
-
-  .harley {
-    width: 100%; /* Image takes full width of the section */
-    height: 100vh; /* Image height matches viewport height */
-    object-fit: cover; /* Crops the image to fit its container without distortion */
-    object-position: top; /* Center the image within its container */
-    padding-left: 20%;
-    padding-right: 50px;
-  }
 
   .today {
     text-align: center;
@@ -246,6 +252,7 @@ html {
   grid-column: 1/2;
   margin-right: 10%;
   margin-left: 10%;
+  text-align: right;
 }
 
 .right {
@@ -372,13 +379,13 @@ html {
   color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
   padding-bottom: 10%;
+  justify-self: center;
+  align-self: center;
 }
 
 .timeline-title {
   grid-column: 2/3;
-  grid-row: 1/1;
   margin-left: 15%;
   font-size: 50px;
 }
